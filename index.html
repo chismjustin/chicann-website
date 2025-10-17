@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi-Cann LLC - Nationwide Partner</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+    function handleVendorSubmit(event) {
+        event.preventDefault();
+        var form = event.target;
+        var subject = encodeURIComponent('Vendor Onboarding Form');
+        var body =
+            'Company Name: ' + encodeURIComponent(form.company.value) + '%0D%0A' +
+            'Contact Name: ' + encodeURIComponent(form.contact.value) + '%0D%0A' +
+            'Email: ' + encodeURIComponent(form.email.value) + '%0D%0A' +
+            'Phone: ' + encodeURIComponent(form.phone.value) + '%0D%0A' +
+            'States Covered: ' + encodeURIComponent(form.states.value) + '%0D%0A' +
+            'NAICS Codes: ' + encodeURIComponent(form.naics.value) + '%0D%0A' +
+            'Certifications/Insurance: ' + encodeURIComponent(form.certs.value) + '%0D%0A' +
+            'Message: ' + encodeURIComponent(form.message.value);
+        window.location.href = 'mailto:justin@chicannoperations.com?subject=' + subject + '&body=' + body;
+    }
+    function handleQuoteSubmit(event) {
+        event.preventDefault();
+        var form = event.target;
+        var subject = encodeURIComponent('Quote Request');
+        var body =
+            'Agency/Client: ' + encodeURIComponent(form.client.value) + '%0D%0A' +
+            'Contact Name: ' + encodeURIComponent(form.qcontact.value) + '%0D%0A' +
+            'Email: ' + encodeURIComponent(form.qemail.value) + '%0D%0A' +
+            'Phone: ' + encodeURIComponent(form.qphone.value) + '%0D%0A' +
+            'Project Location: ' + encodeURIComponent(form.location.value) + '%0D%0A' +
+            'Scope/Requirements: ' + encodeURIComponent(form.qscope.value);
+        window.location.href = 'mailto:justin@chicannoperations.com?subject=' + subject + '&body=' + body;
+    }
+    </script>
+</head>
+<body class="font-sans leading-normal text-gray-800">
+    <header class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-2">Chi-Cann LLC</h1>
+            <p class="text-xl">Nationwide Contractor & Teaming Partner</p>
+            <p class="mt-2">Partnering with busy companies across all 50 states for diverse projects</p>
+        </div>
+    </header>
+    <section class="bg-gray-100 py-4">
+        <div class="container mx-auto px-4 text-center flex flex-wrap justify-center space-x-4 text-sm">
+            <span class="px-2 py-1 bg-blue-200 rounded">UEI: C3E4Z1DMKL87</span>
+            <span class="px-2 py-1 bg-blue-200 rounded">CAGE: 9XYB1</span>
+            <span class="px-2 py-1 bg-blue-200 rounded">NAICS: 236220, 115310, 541611, 541614</span>
+        </div>
+    </section>
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-4 text-center">Capabilities</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="p-4 bg-white shadow rounded">
+                    <h3 class="font-semibold mb-2">Facilities Maintenance & MRO</h3>
+                    <p>Comprehensive maintenance, repairs, and operations support for buildings and infrastructure.</p>
+                </div>
+                <div class="p-4 bg-white shadow rounded">
+                    <h3 class="font-semibold mb-2">Construction Support (236220)</h3>
+                    <p>General contracting and specialty trades for federal, commercial, and industrial projects.</p>
+                </div>
+                <div class="p-4 bg-white shadow rounded">
+                    <h3 class="font-semibold mb-2">Forestry & Land Clearing (115310)</h3>
+                    <p>Vegetation management, site preparation, and habitat restoration using best practices and safety standards.</p>
+                </div>
+                <div class="p-4 bg-white shadow rounded">
+                    <h3 class="font-semibold mb-2">Logistics & Transport</h3>
+                    <p>Supply chain coordination, materials delivery, and rapid deployment across all regions.</p>
+                </div>
+                <div class="p-4 bg-white shadow rounded">
+                    <h3 class="font-semibold mb-2">IT & Security</h3>
+                    <p>Managed IT services, network deployment, and cybersecurity solutions.</p>
+                </div>
+                <div class="p-4 bg-white shadow rounded">
+                    <h3 class="font-semibold mb-2">Staffing & Emergency Response</h3>
+                    <p>Rapid staffing solutions for skilled labor, disaster response, and surge requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-8 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-4 text-center">Industries Served</h2>
+            <p class="text-center mb-6">We work with federal agencies, state and local governments, commercial enterprises, healthcare, education, and environmental organizations.</p>
+            <h3 class="text-xl font-semibold mb-2 text-center">Nationwide Coverage</h3>
+            <p class="text-center">Operating across all 50 states with a vetted network of licensed and insured partners ready to mobilize.</p>
+        </div>
+    </section>
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-4 text-center">Partner with Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Vendor Onboarding Form</h3>
+                    <form onsubmit="handleVendorSubmit(event)" class="space-y-2">
+                        <input class="w-full p-2 border rounded" type="text" name="company" placeholder="Company Name" required>
+                        <input class="w-full p-2 border rounded" type="text" name="contact" placeholder="Contact Name" required>
+                        <input class="w-full p-2 border rounded" type="email" name="email" placeholder="Email" required>
+                        <input class="w-full p-2 border rounded" type="tel" name="phone" placeholder="Phone" required>
+                        <input class="w-full p-2 border rounded" type="text" name="states" placeholder="States Covered (e.g., AR, TX, OK)" required>
+                        <input class="w-full p-2 border rounded" type="text" name="naics" placeholder="NAICS Codes" required>
+                        <input class="w-full p-2 border rounded" type="text" name="certs" placeholder="Certifications/Insurance" required>
+                        <textarea class="w-full p-2 border rounded" name="message" placeholder="Message/Notes" rows="3"></textarea>
+                        <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Submit</button>
+                    </form>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Request a Quote</h3>
+                    <form onsubmit="handleQuoteSubmit(event)" class="space-y-2">
+                        <input class="w-full p-2 border rounded" type="text" name="client" placeholder="Agency/Client Name" required>
+                        <input class="w-full p-2 border rounded" type="text" name="qcontact" placeholder="Contact Name" required>
+                        <input class="w-full p-2 border rounded" type="email" name="qemail" placeholder="Email" required>
+                        <input class="w-full p-2 border rounded" type="tel" name="qphone" placeholder="Phone" required>
+                        <input class="w-full p-2 border rounded" type="text" name="location" placeholder="Project Location" required>
+                        <textarea class="w-full p-2 border rounded" name="qscope" placeholder="Brief description of project scope or requirements" rows="4" required></textarea>
+                        <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-8 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-4 text-center">Past Performance</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="p-4 bg-white shadow rounded">
+                    <h4 class="font-semibold mb-1">USDA Forest Service</h4>
+                    <p class="text-sm">600-acre cedar removal, Mt. Magazine Ranger District (2026)</p>
+                </div>
+                <div class="p-4 bg-white shadow rounded">
+                    <h4 class="font-semibold mb-1">DOE HazMat Vehicle Build</h4>
+                    <p class="text-sm">Design & procurement of custom hazmat apparatus for ORNL</p>
+                </div>
+                <div class="p-4 bg-white shadow rounded">
+                    <h4 class="font-semibold mb-1">Army Facility Renovation</h4>
+                    <p class="text-sm">General contractor for 50,000 sq ft barracks overhaul (2024)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-blue-900 text-white py-4">
+        <div class="container mx-auto px-4 text-center text-sm">
+            <p>&copy; 2025 Chi-Cann LLC. All rights reserved.</p>
+            <p>Prefer email? <a href="mailto:justin@chicannoperations.com" class="underline">justin@chicannoperations.com</a></p>
+        </div>
+    </footer>
+    <!-- Organization schema markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Chi-Cann LLC",
+      "url": "https://www.chicannllc.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "901-626-8676",
+        "contactType": "customer service",
+        "email": "justin@chicannoperations.com",
+        "areaServed": "US"
+      },
+      "sameAs": []
+    }
+    </script>
+</body>
+</html>
